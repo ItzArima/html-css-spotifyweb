@@ -25,7 +25,7 @@ main{
 
 .header-container{
     background-color: #000000;
-    height: 100vh;
+    height: 90vh;
     color: #a3a3a3;
     display: flex;
     flex-direction: column;
@@ -33,11 +33,12 @@ main{
 
 .logo{
     background-image: url(./img/logo.svg);
-    height: 7vh;
+    height: 70%;
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 1rem;
     padding: 1rem 0 0 1rem;
+    width: 100%;
 }
 
 .section div{
@@ -68,7 +69,7 @@ main{
 .navbar{
     display: flex;
     flex-direction: column;
-    height: 88vh;
+    height: 88%;
 
 }
 
@@ -93,8 +94,10 @@ main{
 }
 
 .logo-container{
-    padding: 1rem 0 0 1rem;
+    padding: 1rem 0 0rem 1rem;
     height: 12vh;
+    display: flex;
+    margin-bottom: 1rem;
 }
 
 .playlists{
@@ -181,10 +184,9 @@ main{
 .main-header {
     background-color: #080b12;
     height: 12vh;
-}
-
-.upgrade-button{
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
 }
 
 .upgrade-button button{
@@ -195,8 +197,11 @@ main{
     border: 1px solid white;
     color: white;
     border-radius: 22px;
-    margin: 0.75rem 0.25rem;
+    margin: 1rem 0.25rem;
+}
 
+.upgrade-button button:hover{
+    cursor: pointer;
 }
 
 .header-nav{
@@ -248,16 +253,6 @@ main{
     background-image: url(./img/sinister.jpeg);
 }
 
-.recently-img{
-    height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.recently-track{
-    width: 200px;
-}
-
 .recently{
     padding: 1rem;
 }
@@ -266,20 +261,20 @@ main{
     margin: 1rem;
 }
 
-.recently-track p{
+.recently-track p,.created-for p, .most-popular p{
     color: #a3a3a3;
 }
 
-.created-row{
+.created-row, .popular-row{
     display: flex;
     justify-content: space-between;
 }
 
-.created-track{
+.created-track, .recently-track, .popular-track{
     width: 200px;
 }
 
-.create-img{
+.create-img, .recently-img, .popular-img{
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -303,4 +298,66 @@ main{
 
 .main-container{
     width: 85%;
+}
+
+.created-for p, .most-popular p{
+    padding: 0.75rem 0 1.5rem 0;
+}
+
+.created-for h4, .most-popular h4{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.most-popular{
+    padding: 1rem;
+}
+
+.p1{
+   background-image: url(./img/youg.jpeg); 
+   border-radius: 50%;
+}
+
+.p2{
+    background-image: url(./img/einaudi.jpeg);
+    border-radius: 50%;
+}
+
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    height: 10vh;
+    z-index: 1;
+    background-color: #282828;
+    display: flex;
+}
+
+.under-footer-raw{
+    height: 10vh;
+}
+
+.now-playing{
+    display: flex;
+    align-self: center;
+}
+
+.playing-img, .playing-info, .like-storage{
+    align-self: center;
+}
+
+.footer-container   {
+    display: flex;
+    padding: 1rem 0.5rem;
+}
+
+.playing-img{
+    height: 8vh;
+    width: 8vh;
+    background-image: url(./img/sinister.jpeg);
+    background-size: contain;
+}
+
+.age{
+    display: flex;
 }
