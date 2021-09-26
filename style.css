@@ -527,6 +527,11 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+@media screen and (max-width: 508px){
+    .recently-row{
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 718px){
     .category{
