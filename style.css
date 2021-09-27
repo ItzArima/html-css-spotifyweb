@@ -247,28 +247,10 @@ main{
     flex-wrap: wrap;
 }
 
-.r1{
-   background-image: url(./img/metal_lifting.jpg); 
-}
-
-.r2{
-    background-image: url(./img/stranger.jpeg);
-}
-
-.r3{
-    background-image: url(./img/aquietplace.jpeg);
-}
-
-.r4{
-    background-image: url(./img/split.jpeg);
-}
-
-.r5{
-    background-image: url(./img/cure.jpeg);
-}
-
-.r6{
-    background-image: url(./img/sinister.jpeg);
+img{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
 }
 
 .recently{
@@ -283,22 +265,18 @@ main{
     color: #a3a3a3;
 }
 
-
-.recently-img:hover {
-    filter: brightness(0.4);
-}
-
 .recently-track i{
     position: relative;
-    top: -33%;
+    top: -176%;
     left: 25%;
     font-size: 100px;
     display: flex;
     align-self: center;
     visibility: hidden;
+    width: 100px;
 }
 
-.recently i:hover{
+.recently-track i .recently-img:hover{
     visibility: visible;
 }
 
@@ -510,6 +488,20 @@ footer{
     border-color: green;
 }
 
+.recently-hover{
+    height: 100%;
+    width: 100%;
+    filter: opacity(0.4);
+    position: relative;
+    top: -102%;
+    background-color: black;
+    visibility: hidden;
+}
+
+.recently-img:hover .recently-hover, .recently-img:hover i{
+    visibility: visible;
+}
+
 .category:hover{
     cursor: pointer;
 }
@@ -546,6 +538,110 @@ footer{
     display: flex;
     justify-content: space-between;
 }
+
+.small-icons{
+    display: none;
+}
+
+@media screen and (max-width: 320px){
+    .logo{
+        display: none;
+    }
+    
+    .logo-small{
+        background-image: url(./img/logo-small.svg);
+        height: 30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 2.5rem;
+    }
+
+    .small-icons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 33vh;
+    }
+
+    .logo-container{
+        padding: 0.5rem;
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+
+    .small-icons div{
+        height: 20px;
+        background-repeat: no-repeat;
+        width: 20px;
+        align-self: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .search{
+        margin: 1rem 0;
+    }
+
+    .footer-container>div{
+        width: 31%;
+        font-size: x-small;
+    }
+
+    .icons{
+        font-size: small;
+    }
+
+    footer .fa-play-circle{
+        font-size: 22px;
+    }
+
+    .icons i{
+        padding: 0;
+    }
+    
+    .playing-info{
+        margin: 0;
+    }
+
+    .age{
+        width: 100%;
+    }
+
+    .current, .final{
+        margin: 0;
+        font-size: x-small;
+    }
+
+    .bar{
+        height: 4px;
+    }
+
+    .like-storage{
+        flex-direction: column;
+    }
+
+    .like-storage i:first-of-type{
+        margin: 0;
+    }
+    
+    .footer-container{
+        padding: 1rem 0;
+    }
+
+    .player{
+        margin: 0 0.5rem;
+    }
+
+    .volume-bar{
+        margin: 0;
+        width: 45%;
+    }
+}
+
 @media screen and (max-width: 508px){
     .recently-row{
         justify-content: center;
