@@ -283,6 +283,25 @@ main{
     color: #a3a3a3;
 }
 
+
+.recently-img:hover {
+    filter: brightness(0.4);
+}
+
+.recently-track i{
+    position: relative;
+    top: -33%;
+    left: 25%;
+    font-size: 100px;
+    display: flex;
+    align-self: center;
+    visibility: hidden;
+}
+
+.recently i:hover{
+    visibility: visible;
+}
+
 .created-row{
     display: flex;
     justify-content: space-between;
